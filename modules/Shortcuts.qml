@@ -75,7 +75,7 @@ Scope {
         onPressed: {
             if (root.hasFullscreen)
                 return;
-            Config.bar.persistent: !Config.bar.persistent;
+            Config.bar.persistent = !Config.bar.persistent;
         }
     }
 
