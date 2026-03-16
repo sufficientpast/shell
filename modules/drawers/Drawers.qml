@@ -80,7 +80,7 @@ Variants {
                     required property Item modelData
 
                     x: modelData.x + bar.implicitWidth
-                    y: modelData.y + Config.border.thickness
+                    y: modelData.y
                     width: modelData.width
                     height: modelData.height
                     intersection: Intersection.Subtract
