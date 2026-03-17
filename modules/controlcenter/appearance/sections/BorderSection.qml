@@ -65,4 +65,13 @@ CollapsibleSection {
             }
         }
     }
+    SwitchRow {
+        label: qsTr("Drawers on no border")
+        checked: rootPane.borderHovers
+        onToggled: checked => {
+            rootPane.borderHovers = checked;
+            rootPane.saveConfig();
+        }
+    }
+
 }
