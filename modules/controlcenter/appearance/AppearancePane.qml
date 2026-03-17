@@ -94,7 +94,7 @@ Item {
 
         Config.border.rounding = root.borderRounding;
         Config.border.thinkness = root.borderThickness;
-        Config.border.borderHovers = root.borderHovers
+        Config.border.borderHovers = root.borderHovers;
 
         Config.save();
     }
