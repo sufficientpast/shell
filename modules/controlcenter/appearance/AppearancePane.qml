@@ -35,7 +35,7 @@ Item {
     property real transparencyBase: Config.appearance.transparency.base ?? 0.85
     property real transparencyLayers: Config.appearance.transparency.layers ?? 0.4
     property real borderRounding: Config.border.rounding ?? 1
-    property real borderThickness: Config.border.thickness ?? 1
+    property real borderThickness: Config.border.thinkness ?? 1
 
     property bool desktopClockEnabled: Config.background.desktopClock.enabled ?? false
     property real desktopClockScale: Config.background.desktopClock.scale ?? 1
@@ -92,7 +92,7 @@ Item {
         Config.background.visualiser.spacing = root.visualiserSpacing;
 
         Config.border.rounding = root.borderRounding;
-        Config.border.thickness = root.borderThickness;
+        Config.border.thinkness = root.borderThickness;
 
         Config.save();
     }

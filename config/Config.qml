@@ -211,7 +211,7 @@ Singleton {
 
     function serializeBorder(): var {
         return {
-            thickness: border.thickness,
+            thickness: border.thinkness,
             rounding: border.rounding
         };
     }
