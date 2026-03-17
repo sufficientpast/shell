@@ -18,7 +18,7 @@ Shape {
     required property Item bar
 
     anchors.fill: parent
-    anchors.margins: Config.border.thickness
+    anchors.margins: Config.border.visibleThickness
     anchors.leftMargin: bar.implicitWidth
     preferredRendererType: Shape.CurveRenderer
 

@@ -1,6 +1,9 @@
 import Quickshell.Io
 
 JsonObject {
-    property int thickness: Appearance.padding.normal
+    property bool activeOnHover: true
+    property int visibleThickness: Appearance.padding.normal
+    readonly property int minThickness: !activeOnHover ? 0 : 2
+    readonly property int thickness: Math.max(visibleThickness, minThickness)
     property int rounding: Appearance.rounding.large
 }
