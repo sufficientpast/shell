@@ -133,13 +133,13 @@ sudo cmake --install build
 
 The shell can be started via the `caelestia shell -d` command or `qs -c caelestia`.
 If the entire caelestia dots are installed, the shell will be autostarted on login
-via an `exec-once` in the hyprland config.
+via [autostart](https://wiki.hypr.land/Configuring/Basics/Autostart) in the hyprland config.
 
 ### Shortcuts/IPC
 
-All keybinds are accessible via Hyprland [global shortcuts](https://wiki.hyprland.org/Configuring/Binds/#dbus-global-shortcuts).
+All keybinds are accessible via Hyprland [global shortcuts](https://wiki.hypr.land/Configuring/Basics/Binds/#dbus-global-shortcuts).
 If using the entire caelestia dots, the keybinds are already configured for you.
-Otherwise, [this file](https://github.com/caelestia-dots/caelestia/blob/main/hypr/hyprland/keybinds.conf#L1-L39)
+Otherwise, [this file](https://github.com/caelestia-dots/caelestia/blob/de448ab4fa413f4001054ad966a27dfc8778c4ea/hypr/hyprland/keybinds.lua#L8-L32)
 contains an example on how to use global shortcuts.
 
 All IPC commands can be accessed via `caelestia shell ...`. For example
@@ -153,6 +153,30 @@ The list of IPC commands can be shown via `caelestia shell -s`:
 ```
 $ caelestia shell -s
 target drawers
+  function toggle(drawer: string): void
+  function list(): string
+target notifs
+  function clear(): void
+target lock
+  function lock(): void
+  function unlock(): void
+  function isLocked(): bool
+target mpris
+  function playPause(): void
+  function getActive(prop: string): string
+  function next(): void
+  function stop(): void
+  function play(): void
+  function list(): string
+  function pause(): void
+  function previous(): void
+target picker
+  function openFreeze(): void
+  function open(): void
+target wallpaper
+  function set(path: string): void
+  function get(): string
+  function list(): stringarget drawers
   function toggle(drawer: string): void
   function list(): string
 target notifs
@@ -891,21 +915,11 @@ The module automatically adds Caelestia shell to the path with **full functional
 ### Need help or support?
 
 You can join the community Discord server for assistance and discussion:
-https://discord.gg/BGDCFCmMBk
-
-### My screen is flickering, help pls!
-
-Try disabling VRR in the hyprland config. You can do this by adding the following to `~/.config/caelestia/hypr-user.conf`:
-
-```conf
-misc {
-    vrr = 0
-}
-```
+https://caelestiashell.com/discord
 
 ### I want to make my own changes to the hyprland config!
 
-You can add your custom hyprland configs to `~/.config/caelestia/hypr-user.conf`.
+You can add your custom hyprland configs to `~/.config/caelestia/hypr-user.lua` and configure existing variables in `~/.config/caelestia/hypr-vars.lua` as explained [here](https://github.com/caelestia-dots/caelestia#default-keybinds).
 
 ### I want to make my own changes to other stuff!
 
