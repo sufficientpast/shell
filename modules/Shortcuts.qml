@@ -116,7 +116,7 @@ Scope {
         name: "newNote"
         description: "Create a new note in notes tab"
         onPressed: {
-            if (root.hasFullscreen)
+            if (root.hasFullscreen || Config.dashboard.showNotes)
                 return;
             const screenState = ShellState.forActive();
             screenState.dashboard = true;
