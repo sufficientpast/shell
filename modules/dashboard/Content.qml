@@ -34,7 +34,7 @@ Item {
                 component: notesComponent,
                 iconName: "edit_note",
                 text: Tr.tr("Notes"),
-                enabled: true
+                enabled: Config.dashboard.showNotes
             },
             {
                 component: performanceComponent,

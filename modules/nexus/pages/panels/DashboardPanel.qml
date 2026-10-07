@@ -65,6 +65,12 @@ PageBase {
         }
 
         ToggleRow {
+            text: Tr.tr("Notes")
+            checked: Config.dashboard.showNotes
+            onToggled: GlobalConfig.dashboard.showNotes = checked
+        }
+
+        ToggleRow {
             text: Tr.tr("Performance")
             checked: Config.dashboard.showPerformance
             onToggled: GlobalConfig.dashboard.showPerformance = checked
